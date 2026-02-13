@@ -35,7 +35,7 @@
         style="vertical-align: middle;"
       />
     </a>
-    <a href="https://raw.githubusercontent.com/Rainyrou/ASTER/main/asserts/wx.png">
+    <a href="asserts/wx.png">
       <img
         src="https://img.shields.io/badge/微信-green?logo=wechat&logoColor=green"
         alt="WeChat"
