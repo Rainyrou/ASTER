@@ -57,7 +57,9 @@
 ## 🔥 News
 
 - [2026.02.13] We **open-source** our full reproduction of **ASTER**, including:
-  - **Dataset**: [Aster_SFT4K](https://huggingface.co/datasets/QuantumStackOverflow/Aster_SFT4K)
+  - **Dataset**: 
+    - [ASTER_SFT4K](https://huggingface.co/datasets/QuantumStackOverflow/Aster_SFT4K)
+    - [ASTER_RL_DAPO_17K](./datasets/dapo.parquet)
   - **Model**: [ASTER_4B](https://huggingface.co/QuantumStackOverflow/ASTER_4B)
   - **Training code** for both SFT and RL stages
   - Evaluation scripts
@@ -109,7 +111,7 @@ ASTER achieves state-of-the-art performance across competitive mathematical reas
 
 **Note**: The AIME 2025 generation results are available in [`asserts/aime25.jsonl`](asserts/aime25.jsonl).
 
-Our RL experiments use [Qwen3-4B-Thinking-2507](https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507) as the backbone model and [DAPO-17K](https://github.com/THUDM/DeepDive) as the training dataset. 
+Our RL experiments use [Qwen3-4B-Thinking-2507](https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507) as the backbone model and [DAPO-17K](./datasets/dapo.parquet) as the training dataset. 
 
 ---
 
