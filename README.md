@@ -227,10 +227,10 @@ bash scripts/train/train_4b_second_stage.sh
 
 - Thanks to the authors of the [ASTER](https://arxiv.org/abs/2602.01204) paper for their detailed work
 - Built on top of [Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507) base models
-- Uses [DAPO](https://github.com/THUDM/DeepDive) as the training dataset
-- Uses [LlamaFactory](https://github.com/huggingface/llama-factory) for multi-turn SFT
-- Uses [SandboxFusion](https://github.com/THUDM/SandboxFusion) for RL training
-- Uses [verl](https://github.com/THUDM/slime/) framework for RL training
+- Uses [DAPO](https://github.com/BytedTsinghua-SIA/DAPO) as the training dataset
+- Uses [LlamaFactory](https://github.com/hiyouga/LlamaFactory) for multi-turn SFT
+- Uses [SandboxFusion](https://github.com/bytedance/SandboxFusion) for RL training
+- Uses [verl](https://github.com/verl-project/verl) framework for RL training
 
 
 ```
