@@ -27,6 +27,14 @@
         style="vertical-align: middle;"
       />
     </a>
+    <a href="https://crocus-phlox-d84.notion.site/ASTER-Agentic-Scaling-with-Tool-integrated-Extended-Reasoning-30284206990680bcb054e573c052339d">
+      <img
+        src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white"
+        alt="Notion"
+        height="18"
+        style="vertical-align: middle;"
+      />
+    </a>
     <a href="https://raw.githubusercontent.com/Rainyrou/ASTER/main/asserts/wx.png">
       <img
         src="https://img.shields.io/badge/微信-green?logo=wechat&logoColor=green"
