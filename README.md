@@ -107,6 +107,7 @@ ASTER achieves state-of-the-art performance across competitive mathematical reas
 | **AIME 2025** | **87.7%** |
 | **HMMT 2025** | **77.1%** |
 
+**Note**: The AIME 2025 generation results are available in [`asserts/aime25.jsonl`](asserts/aime25.jsonl).
 
 Our RL experiments use [Qwen3-4B-Thinking-2507](https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507) as the backbone model and [DAPO-17K](https://github.com/THUDM/DeepDive) as the training dataset. 
 
