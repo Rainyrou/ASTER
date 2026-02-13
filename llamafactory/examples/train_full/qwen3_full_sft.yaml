@@ -1,0 +1,59 @@
+### model
+# Base model path, can be HuggingFace model ID or local path
+# Example: Qwen/Qwen3-4B-Thinking-2507 or /path/to/Qwen3-4B-Thinking-2507
+model_name_or_path: path/to/Qwen3-4B-Thinking-2507
+template: qwen3
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+
+# Attention mechanism optimization
+# flash_attn: fa2  # Use Flash Attention 2
+# use_unsloth_gc: true  # Use Unsloth gradient checkpointing optimization
+
+# DeepSpeed configuration (optional, for multi-GPU training)
+# Uncomment to enable DeepSpeed ZeRO optimization
+# deepspeed: examples/deepspeed/ds_z3_config.json  # ZeRO-3, suitable for large models
+# deepspeed: examples/deepspeed/ds_z2_offload_config.json  # ZeRO-2 with offload, suitable for memory-constrained setups
+
+# use_unsloth: true  # Enable Unsloth optimization (if installed)
+
+### dataset
+# Dataset directory path containing aster_sft.parquet file
+dataset_dir: path/to/llamafactory/data
+# Dataset name, corresponding to configuration in dataset_info.json
+dataset: aster_sft
+cutoff_len: 32768  # Maximum sequence length
+enable_thinking: true  # Enable thinking mode (Thinking Mode)
+mask_history: false  # Whether to mask conversation history
+train_on_prompt: false  # Whether to compute loss on prompt part
+ignore_empty_think: false  # Whether to ignore empty thinking content
+preprocessing_num_workers: 64  # Number of data preprocessing worker processes
+dataloader_num_workers: 16  # Number of data loader worker processes
+drop_exceeding_samples: true  # Drop samples exceeding cutoff_len
+
+### output
+output_dir: path/to/Qwen3-4B-Thinking-2507_SFT
+overwrite_output_dir: true
+save_steps: -1  # -1 means save only at the end of each epoch
+logging_steps: 1  # Log every N steps
+eval_steps: 10  # Evaluate every N steps (if eval_dataset is set)
+report_to: tensorboard  # Options: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 1  # Batch size per device
+gradient_accumulation_steps: 16  # Gradient accumulation steps, effective batch size = per_device_train_batch_size * gradient_accumulation_steps * num_gpus
+learning_rate: 3e-5
+num_train_epochs: 6
+warmup_ratio: 0.06  # Learning rate warmup ratio
+lr_scheduler_type: cosine_with_min_lr  # Learning rate scheduler type
+lr_scheduler_kwargs:
+  min_lr: 3e-5  # Minimum learning rate
+# neat_packing: true  # Enable neat packing optimization (optional)
+
+bf16: true  # Use bfloat16 mixed precision training
+gradient_checkpointing: true  # Enable gradient checkpointing to save memory
+# enable_liger_kernel: true  # Enable Liger kernel optimization

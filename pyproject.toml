@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aster"
+version = "1.0.0"
+dependencies = [
+]
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aster","verl"]

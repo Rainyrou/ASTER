@@ -1,0 +1,4 @@
+model_name_or_path: ./saves/qwen3_1_7b_thinking_sft_full
+template: qwen3
+infer_backend: vllm #choices： [huggingface, vllm]
+
